@@ -351,6 +351,7 @@ std::string webGet(const std::string &url, const std::string &proxy, unsigned in
             writeLog(0, "CACHE NOT EXIST: '" + url + "', creating new cache.");
         //content = curlGet(url, proxy, response_headers, return_code); // try to fetch data
         curlGet(argument, fetch_res);
+        writeLog(0,"curlGet result_code" + std::to_string(return_code);
         if(return_code == 200) // success, save new cache
         {
             //guarded_mutex guard(cache_rw_lock);
